@@ -1,0 +1,59 @@
+package com.vogella.maven.quickstart;
+import java.util.*;
+class chocalate
+{
+	public void sorting(int l[])
+	{
+		int temp,i;
+		for(i=0;i<3;i++)
+		{
+			if(l[i]>l[i+1])
+			{
+				temp=l[i];
+				l[i]=l[i+1];
+				l[i+1]=temp;
+			}
+		}
+		for(i=0;i<3;i++)
+		{
+			System.out.println(l[i]);
+		}
+	}
+}
+class sweets extends chocalate
+{
+	public void gift_weight(int n1,int n2)
+	{
+		int total_weight=0;
+		total_weight=n1+n2;
+		System.out.println(total_weight);
+	}
+}
+public class m1 {
+public static void main(String[] args)
+{
+	int n,a,b,i;
+	int l[]=new int[100];
+	Scanner sc=new Scanner(System.in);
+	n=sc.nextInt();
+	sweets s1=new sweets();
+	sweets s2=new sweets();
+	sweets s3=new sweets();
+	a=sc.nextInt();
+	b=sc.nextInt();
+	l[0]=a;
+	s1.gift_weight(a,b);
+	a=sc.nextInt();
+	b=sc.nextInt();
+	s2.gift_weight(a,b);
+	l[1]=a;
+	a=sc.nextInt();
+	b=sc.nextInt();
+	s3.gift_weight(a,b);
+	l[2]=a;
+	chocalate c1=new chocalate();
+	c1.sorting(l);
+	
+	}
+}
+
